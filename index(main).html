@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portfolio</title>
+
+    <!-- Box Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: "Poppins", sans-serif;
+      }
+      :root {
+        --bg-color: #1f242d;
+        --second-bg-color: #323946;
+        --text-color: #fff;
+        --main-color: #0ef;
+      }
+      *::selection {
+        background: var(--main-color);
+        color: var(--bg-color);
+      }
+      body {
+        background: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+      header {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: var(--second-bg-color);
+        padding: 1rem 0;
+        z-index: 1000;
+      }
+      header.container {
+        
+        align-items: center;
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+      }
+      
+      .logo {
+        color: var(--main-color);
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+      .nav-links li {
+        margin: 0 1rem;
+      }
+      .nav-links a {
+        color: var(--text-color);
+        font-size: 1.4rem;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--main-color);
+      }
+      #home {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: var(--bg-color);
+      }
+      .home-content h2 {
+        color: var(--main-color);
+        font-size: 2rem;
+      }
+      .home-content h1 {
+        font-size: 4rem;
+        font-weight: 700;
+      }
+      .home-content h3 {
+        font-size: 2rem;
+      }
+      .social-icons a {
+        margin: 0 0.5rem;
+        color: var(--text-color);
+        font-size: 2rem;
+      }
+      .social-icons a:hover {
+        color: var(--main-color);
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.8rem 2rem;
+        color: var(--bg-color);
+        background: var(--main-color);
+        border-radius: 2rem;
+        transition: background 0.3s;
+      }
+      .btn:hover {
+        background: var(--text-color);
+      }
+      section {
+        padding: 1rem 0;
+      }
+      #about h2, #services h2, #portfolio h2, #contact h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+      #services .service-cards {
+        display: flex;
+        justify-content: space-around;
+        
+      }
+      .card {
+        background: var(--second-bg-color);
+        padding: 2rem;
+        margin: 10px;
+        border-radius: 1rem;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-1rem);
+      }
+      .card h3 {
+        margin-top: 1rem;
+      }
+      .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem 0;
+        background: var(--second-bg-color);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <div class="container">
+          <h1 class="logo">Portfolio.</h1>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Project</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div style="margin-top: 120px;" class="container home-content">
+        <h2>Hello, It's Me</h2>
+        <h1>Roushan Gupta</h1>
+        <h3>And I'm a <span class="typing">Frontend Developer</span></h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <img src="/public/Web-Development-Trends.jpg" width="500" height="250" alt="Home Profile" />
+        <div class="social-icons">
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-twitter'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+        </div>
+        <a href="#" class="btn">Download CV</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container about-content">
+        <h2 style="margin-top: 140px;">About <span>Me</span></h2>
+        <h3>Frontend Developer</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident doloremque distinctio earum nostrum debitis.</p>
+        <img src="/public/Untitled Project.jpg" style="border-radius: 60px; "width="600" height="400" alt="About Profile" />
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container">
+        <h2>Our <span>Services</span></h2>
+        <div class="service-cards">
+          <div class="card">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" style="color:blue">Read More</a>
+          </div>
+          <div class="card">
+            <i class='bx bx-paint'></i>
+            <h3>Graphic Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" style="color:blue">Read More</a>
+          </div>
+          <div class="card">
+            <i class='bx bx-bullseye'></i>
+            <h3>Digital Marketing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" style="color:blue">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="container portfolio-content">
+        <h2>Latest <span>Project</span></h2>
+        <div class="project-gallery">
+         <marquee behavior="" direction="">
+          <img src="img/project1.jpg" alt="Project 1"> 
+          <img src="img/project2.jpg" alt="Project 2">
+          <img src="img/project3.jpg" alt="Project 3">
+          <img src="img/project4.jpg" alt="Project 4">
+          <img src="img/project5.jpg" alt="Project 5">
+          <img src="img/project6.jpg" alt="Project 6">
+        </marquee>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container contact-content">
+        <h2>Contact <span>Me!</span></h2>
+        <form action="#">
+          <div class="form-group">
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email Address" required />
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Mobile Number" required />
+            <input type="text" placeholder="Email Subject" required />
+          </div>
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 by Roushan | All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Custom JS -->
+    <script>
+      // Scroll Reveal Animation
+      ScrollReveal().reveal('header', { duration: 2000, origin: 'top' });
+      ScrollReveal().reveal('#home .home-content', { duration: 2000, origin: 'bottom' });
+      ScrollReveal().reveal('#about', { duration: 2000, origin: 'left' });
+      ScrollReveal().reveal('#services', { duration: 2000, origin: 'right' });
+      ScrollReveal().reveal('#portfolio', { duration: 2000, origin: 'bottom' });
+      ScrollReveal().reveal('#contact', { duration: 2000, origin: 'top' });
+
+      // Typed.js Animation
+      const typed = new Typed('.typing', {
+        strings: ['Frontend Developer', 'Web Designer', 'Freelancer'],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+      });
+    </script>
+  </body>
+</html>
